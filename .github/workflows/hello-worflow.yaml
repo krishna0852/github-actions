@@ -1,27 +1,27 @@
-name: Hello-workflow
+# name: Hello-workflow
 
-on:
- push:
-  branches:
-    - main 
- pull_request:
-  branches:
-    - main 
+# on:
+#  push:
+#   branches:
+#     - main 
+#  pull_request:
+#   branches:
+#     - main 
 
-# workflow_dispatch:
+# # workflow_dispatch:
 
-jobs:
-  hellojob:
-   runs-on: ubuntu-latest
-   steps: 
-    - name: clone the code 
-      uses: actions/checkout@v2
+# jobs:
+#   hellojob:
+#    runs-on: ubuntu-latest
+#    steps: 
+#     - name: clone the code 
+#       uses: actions/checkout@v2
    
-    - name: print the message 
-      run: echo "hello-job"
+#     - name: print the message 
+#       run: echo "hello-job"
   
-  byejob:
-    runs-on: ubuntu-latest 
-    steps:
-     - name: display echo message 
-       run: echo "byejob"
+#   byejob:
+#     runs-on: ubuntu-latest 
+#     steps:
+#      - name: display echo message 
+#        run: echo "byejob"
