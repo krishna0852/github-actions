@@ -1,0 +1,25 @@
+name: Hello-workflow
+
+on:
+ push:
+  branches:
+    - main 
+ pull_request:
+  branches:
+    - main 
+
+ workflow_dispatch:
+
+ jobs:
+  hellojob:
+   runs-on: ubuntu-latest 
+   - name: clone the code 
+     uses: actions/checkout@v2
+   
+   - name: print the message 
+     run: echo "hello-job"
+  
+  byejob:
+    runs-on: ubuntu-latest 
+    - name: display echo message 
+      run: echo "byejob"
