@@ -10,16 +10,18 @@ on:
 
  workflow_dispatch:
 
- jobs:
+jobs:
   hellojob:
-   runs-on: ubuntu-latest 
-   - name: clone the code 
-     uses: actions/checkout@v2
+   runs-on: ubuntu-latest
+   steps: 
+    - name: clone the code 
+      uses: actions/checkout@v2
    
-   - name: print the message 
-     run: echo "hello-job"
+    - name: print the message 
+      run: echo "hello-job"
   
   byejob:
     runs-on: ubuntu-latest 
-    - name: display echo message 
-      run: echo "byejob"
+    steps:
+     - name: display echo message 
+       run: echo "byejob"
