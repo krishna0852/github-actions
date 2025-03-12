@@ -1,0 +1,13 @@
+name: display file 
+
+on:
+ workflow_dispatch:
+
+jobs:
+    dispfile:
+        runs-on: ubuntu-latest
+        steps:
+            - name: display file
+              uses: actions/checkout@v2
+              run: cat testfile
+            #   working_directory: ./
