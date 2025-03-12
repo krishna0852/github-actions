@@ -9,6 +9,10 @@ jobs:
         steps:
             - name: checkout the code
               uses: actions/checkout@v2
+            - name: display current directory
+              run: pwd
+            - name: display current directory files
+              run: ls -lhrt
             - name: display file
               run: cat testfile
             #   working_directory: ./
