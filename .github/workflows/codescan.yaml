@@ -1,7 +1,7 @@
 name: web codescan 
 
 on:
-    workflow_dispatch
+    workflow_dispatch:
 
 jobs:
     codeScan:
