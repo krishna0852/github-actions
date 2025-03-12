@@ -13,7 +13,13 @@ jobs:
         steps:
             - name: checkout the code
               uses: actions/checkout@v2
-            - name: display contents
-              run: |
-                 pwd
-                 ls -lhrt
+            
+            # - name: display contents
+            #   run: |
+            #      pwd
+            #      ls -lhrt
+            - name: install dependencies
+              run: npm install
+            
+            - name: Run tests
+              run: npm run test
