@@ -1,0 +1,25 @@
+name: web codescan 
+
+on:
+    workflow_dispatch
+
+jobs:
+    codeScan:
+     name: set workdir
+     defaults:
+        run:
+            working-directory: ./web
+     runs-on: ubuntu-latest
+
+    stratgey:
+        matrix:
+          language:["javascript"]
+
+     steps:
+        - name: checkout code 
+          uses: actions/checkout@v2
+        - name: Code Scan
+          uses: github/codeql-action/init@v2
+          with:
+            language: ${{ strategy.matrix.language }}
+          
