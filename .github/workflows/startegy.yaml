@@ -15,6 +15,6 @@ jobs:
             - name: setup Python environment
               uses: actions/setup-python@v2
               with:
-                versions: ${{ matrix.py-versions }}
+                py-versions: ${{ matrix.py-versions }}
             - name: Display python version
               run: python --version
