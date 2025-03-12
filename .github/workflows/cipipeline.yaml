@@ -1,0 +1,19 @@
+name: continuous integration
+
+on:
+    workflow_dispatch:
+
+jobs:
+    CI-build:
+        name: set working directory for cibuild
+        defaults:
+            run:
+                working-directory: ./web
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout the code
+              uses: actions/checkout@v2
+            - name: display contents
+              run: |
+                 pwd
+                 ls -lhrt
