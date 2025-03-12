@@ -19,10 +19,6 @@ jobs:
         matrix:
             language: ["javascript"]
 
-
-    
-
-
      steps:
         - name: checkout code 
           uses: actions/checkout@v2
@@ -30,4 +26,7 @@ jobs:
           uses: github/codeql-action/init@v2
           with:
             language: ${{ strategy.matrix.language }}
+
+        - name: Analyze code
+          uses: github/codeql-action/analyze@v2
           
