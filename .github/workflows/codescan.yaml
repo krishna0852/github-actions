@@ -25,10 +25,11 @@ jobs:
         - name: Code Scan
           uses: github/codeql-action/init@v2
           with:
-            language: ${{ strategy.matrix.language }}
+            languages: ${{ strategy.matrix.language }}
 
         - name: Analyze code
           uses: github/codeql-action/analyze@v2
           with:
-            category: ${{ strategy.matrix.language }}
+           # category: ${{ strategy.matrix.language }}
+             category: "/language:${{ matrix.language }}"
           
