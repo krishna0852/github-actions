@@ -1,6 +1,12 @@
 name: continuous integration
 
 on:
+    pull_request:
+      branches:
+        - main
+      paths:
+       - 'web/**'
+
     workflow_dispatch:
 
 jobs:
