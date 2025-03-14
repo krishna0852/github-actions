@@ -53,6 +53,7 @@ jobs:
               uses: aws-actions/configure-aws-credentials@v4
               with:
                  role-to-assume: arn:aws:iam::730335449261:role/githubactions-pract
+                 region: us-east-1
 
             - name: Get credentials info
               run: |
