@@ -14,9 +14,9 @@ on:
 jobs:
     create-env:
         runs-on: ubuntu-latest
-        permissions:
-          id-token: write
-          contents: read
+        # permissions:
+        #   id-token: write
+        #   contents: read
         steps:
             - name: Verify the given PR number
               uses: actions/github-script@v7
