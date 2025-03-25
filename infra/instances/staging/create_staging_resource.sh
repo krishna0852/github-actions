@@ -61,6 +61,8 @@ _main() {
   # Read the first argument passed to the script otherwise default to random_id
   local -r resource_id="${1:-$random_id}"
 
+  echo "initial resource_id: $resource_id"
+
   # If the random_id fails to generate for whatever reason, exit with an error
   if [[ -z "${resource_id}" ]]; then
     _exit_1 "FATAL: Failed to read resource identifier and default to random_id"
@@ -78,7 +80,9 @@ _main() {
   fi
 
   # Exit after outputing the meta data either way
-  echo '{"resource_file": "extra_staging_'${resource_id}'.tf", "terraform_expected_output": "staging_dns_'${resource_id}'"}'
+  echo "initial resource_id at 83: $resource_id"
+  #echo '{"resource_file": "extra_staging_'${resource_id}'.tf", "terraform_expected_output": "staging_dns_'${resource_id}'"}'
+  echo "{\"resource_file\": \"extra_staging_${resource_id}.tf\", \"terraform_expected_output\": \"staging_dns_${resource_id}\"}"
   exit 0
 }
 
