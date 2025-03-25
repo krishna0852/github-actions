@@ -60,6 +60,10 @@ _main() {
   local -r random_id="$(date +%s)"
   # Read the first argument passed to the script otherwise default to random_id
   local -r resource_id="${1:-$random_id}"
+  
+  echo "disply resource_id"
+  echo "initial resource_id: ${resource_id}"
+
 
   #echo "initial resource_id: $resource_id"
 
