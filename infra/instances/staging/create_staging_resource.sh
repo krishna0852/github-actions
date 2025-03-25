@@ -80,7 +80,7 @@ _main() {
   fi
 
   # Exit after outputing the meta data either way
-  echo "initial resource_id at 83: $resource_id"
+  #echo "initial resource_id at 83: $resource_id"
   #echo '{"resource_file": "extra_staging_'${resource_id}'.tf", "terraform_expected_output": "staging_dns_'${resource_id}'"}'
   echo "{\"resource_file\": \"extra_staging_${resource_id}.tf\", \"terraform_expected_output\": \"staging_dns_${resource_id}\"}"
   exit 0
