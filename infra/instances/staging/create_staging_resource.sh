@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+echo "Script Execution start..."
 # Short form: set -u
 set -o nounset
 
