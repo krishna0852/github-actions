@@ -69,6 +69,7 @@ jobs:
               working-directory: infra/instances/staging 
               run:  |
                #  OUTPUT="$((./create_staging_resource.sh PR_${{ github.event.inputs.PR_number }} | jq -r .terraform_expected_output))"
+                  chmod +x create_staging_resource.sh 
                   OUTPUT=$(./create_staging_resource.sh PR_${{ github.event.inputs.PR_number }} | jq -r .terraform_expected_output)
                   echo "Display output $OUTPUT"
               
