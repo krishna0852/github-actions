@@ -61,7 +61,7 @@ _main() {
   # Read the first argument passed to the script otherwise default to random_id
   local -r resource_id="${1:-$random_id}"
 
-  echo "initial resource_id: $resource_id"
+  #echo "initial resource_id: $resource_id"
 
   # If the random_id fails to generate for whatever reason, exit with an error
   if [[ -z "${resource_id}" ]]; then
